@@ -10,3 +10,11 @@ I solved the second part of the homework, calculated aggregated user threat scor
   5. Test Large User Variance
   6. Test No Threat in All Departments
   7. Test Max Threat in All Departments
+
+Day 3:
+I did the third part of the hw1, "Feature Transformation". My tests:
+  1. Testing for a direct difference without crossing midnight
+  2. Testing difference crossing midnight
+  3. Testing difference for the same hour
+  4. Testing opposite points on the clock
+  5. Testing boundary cases like 0 and 24
