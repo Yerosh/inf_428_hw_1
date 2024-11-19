@@ -1,15 +1,16 @@
 class Solution:
-    def findLengthOfLCIS(self, nums: List[int]) -> int:
-        cnt = 1
-        max_cnt = 0
-        if len(nums) == 1:
-            return 1
-        for i in range(1,len(nums)):
-            if nums[i] > nums[i -1]:
-                cnt += 1
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+        midx = m - 1
+        nidx = n - 1 
+        right = m + n - 1
+
+        while nidx >= 0:
+            if midx >= 0 and nums1[midx] > nums2[nidx]:
+                nums1[right] = nums1[midx]
+                midx -= 1
             else:
-                cnt = 1
-            if cnt > max_cnt:
-                max_cnt = cnt
-            
-        return max_cnt 
+                nums1[right] = nums2[nidx]
+                nidx -= 1
+
+            right -= 1
+        
